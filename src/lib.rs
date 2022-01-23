@@ -1,19 +1,8 @@
-mod front_of_house {
-  pub mod hosting {
-    pub struct Reservation {
-      name: String,
-      position: u8,
-    }
-    // const mut current_position: u8 = 0;
-    pub fn add_to_waitlist(name: String) -> Reservation {
-      // current_position += 1
-      // println!("Adding {} to position {}", name, current_position);
-      Reservation { name, position: 0 }
-    }
-  }
-}
 
-use front_of_house::hosting;
+// use front_of_house::hosting;
+mod front_of_house;
+
+pub use crate::front_of_house::hosting;
 
 pub fn arrive_at_restaraunt() {
   hosting::add_to_waitlist(String::from("Chris"));

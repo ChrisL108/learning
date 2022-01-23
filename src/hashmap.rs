@@ -1,5 +1,5 @@
 use console::style;
-use std::collections::HashMap;
+use std::{self, cmp::Ordering, collections::HashMap as HM, io};
 // use std::io;
 fn main() {
     println!("\n{}\n", style("Hello!").bold().cyan());
